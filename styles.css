@@ -1,0 +1,280 @@
+/* Global Styles */
+:root {
+    --primary-color: #25382F;  /* Dark green from the image */
+    --secondary-color: #3BB78F; /* Lighter green for accents */
+    --text-color: #FFFFFF;
+    --whatsapp-color: #25D366;
+    --font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Header Styles */
+header {
+    padding: 30px 0;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--text-color);
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.profile-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.profile-info h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* Specialty Section */
+.specialty {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.specialty h3 {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+/* Services Section */
+.services {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.service-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    background-color: rgba(59, 183, 143, 0.3);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.service-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Target Audience Section */
+.target-audience {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.target-audience h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.audience-list {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.audience-list li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.audience-list i {
+    color: var(--secondary-color);
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+/* Banks Section */
+.banks {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.banks h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.bank-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.bank {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bank h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+/* Contact Section */
+.contact {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.whatsapp-btn {
+    background-color: var(--whatsapp-color);
+    color: var(--text-color);
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.05);
+}
+
+.whatsapp-btn i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-img {
+        margin-right: 0;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .profile-info h1 {
+        font-size: 2rem;
+    }
+    
+    .profile-info h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-info h1 {
+        font-size: 1.8rem;
+    }
+    
+    .profile-info h2 {
+        font-size: 1rem;
+    }
+    
+    .specialty h3 {
+        font-size: 1.1rem;
+    }
+    
+    .whatsapp-btn {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+} 
