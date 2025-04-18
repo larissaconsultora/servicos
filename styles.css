@@ -165,36 +165,63 @@ header {
 
 /* Banks Section */
 .banks {
-    padding: 50px 0;
+    padding: 20px 0;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .banks h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 30px;
+    font-weight: 700;
 }
 
 .bank-logos {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 900px;
 }
 
 .bank {
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
     border-radius: 10px;
-    width: 200px;
-    height: 100px;
+    width: 250px;
+    height: 80px;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bank-img {
+    width: auto;
+    object-fit: contain;
+}
+
+.bank:first-child .bank-img {
+    height: 45px;
+    margin-right: 8px;
+}
+
+.bank:last-child .bank-img {
+    height: 55px;
+    margin-right: 5px;
 }
 
 .bank h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0;
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 700;
+    text-align: left;
+    flex: 1;
+    color: white;
+    line-height: 1.2;
 }
 
 /* Contact Section */
@@ -258,6 +285,32 @@ footer {
     .profile-info h2 {
         font-size: 1.2rem;
     }
+    
+    .bank-logos {
+        gap: 15px;
+    }
+    
+    .banks h2 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+    
+    .bank {
+        width: 230px;
+        height: 70px;
+    }
+    
+    .bank:first-child .bank-img {
+        height: 55px;
+    }
+    
+    .bank:last-child .bank-img {
+        height: 65px;
+    }
+    
+    .bank h3 {
+        font-size: 1.3rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -276,5 +329,35 @@ footer {
     .whatsapp-btn {
         padding: 12px 20px;
         font-size: 1rem;
+    }
+    
+    .bank-logos {
+        gap: 15px;
+    }
+    
+    .banks h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    
+    .bank {
+        width: 200px;
+        height: 60px;
+    }
+    
+    .bank:first-child .bank-img {
+        height: 45px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    
+    .bank:last-child .bank-img {
+        height: 55px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .bank h3 {
+        font-size: 1.1rem;
     }
 } 
