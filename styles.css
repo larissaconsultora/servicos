@@ -343,7 +343,7 @@ footer {
     
     .bank {
         width: 200px;
-        height: 60px;
+        height: 80px;
     }
     
     .bank:first-child .bank-img {
