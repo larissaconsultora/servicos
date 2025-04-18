@@ -188,13 +188,13 @@ header {
 .bank {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    width: 250px;
+    width: 180px;
     height: 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    padding: 10px;
+    padding: 20px;
     position: relative;
     overflow: hidden;
 }
@@ -206,12 +206,12 @@ header {
 
 .bank:first-child .bank-img {
     height: 45px;
-    margin-right: 8px;
+    margin-right: 15px;
 }
 
 .bank:last-child .bank-img {
     height: 55px;
-    margin-right: 5px;
+    margin-right: 15px;
 }
 
 .bank h3 {
